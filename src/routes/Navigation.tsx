@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 
 import logo from "../logo.svg";
+import { ShoppingPage } from "../02-component-patterns/pages/ShoppingPage";
 
 
 
@@ -17,7 +18,7 @@ export const Navigation = () => {
                                 <NavLink
                                     to="/"
                                     className={({ isActive }) => isActive ? 'nav-active' : ''}>
-                                    Home
+                                    Shopping
                                 </NavLink>
                             </li>
                             <li>
@@ -48,7 +49,7 @@ export const Navigation = () => {
                         />
                         <Route
                             path='/'
-                            element={<h1>Home</h1>}
+                            element={<ShoppingPage />}
                         />
                     </Routes>
                 </div>
